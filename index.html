@@ -52,19 +52,34 @@
                 <ul class="slide_ul">
                     <li><a href="#"><div class="bg_img bg_img1"></div></a></li>
                     <li><a href="#"><div class="bg_img bg_img2"></div></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#"><div class="bg_img bg_img3"></div></a></li>
+                    <li><a href="#"><div class="bg_img bg_img4"></div></a></li>
+                    <li><a href="#"><div class="bg_img bg_img5"></div></a></li>
+                    <li><a href="#"><div class="bg_img bg_img6"></div></a></li>
+                    <li><a href="#"><div class="bg_img bg_img7"></div></a></li>
+                    <!-- <li><a href="#"><div class="bg_img bg_img1"></div></a></li> -->
                 </ul>
             </div>
-            <button id="prev" type="button">
-                <img src="images/prev.png" alt="">
-            </button>
-            <button id="next" type="button">
-                <img src="images/next.png" alt="">
-            </button>
+
+            <div class="btn_area">
+                <button id="prev" type="button">
+                    <img src="images/prev.png" alt="">
+                </button>
+                <button id="next" type="button">
+                    <img src="images/next.png" alt="">
+                </button>
+            </div>
+            
+            <ul class="quick_slide">
+                <li class="on"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+
         </article>
 
         <article id="sub_fes">
@@ -91,14 +106,14 @@
                     <div class="btn_more">
                         <a href="#"><img src="images/btn_more.jpg" alt="더보기"></a>
                     </div>
-                    <ul class="notice_notice">
+                    <ul class="notice_notice notice_content">
                         <li><a href="#">2022 부산국제록페스티벌 자원봉사..</a></li>
-                        <li><a href="#">「제17회 부산불꽃축제」 시민사연공..</a></li>
-                        <li><a href="#">『 제17회 부산불꽃축제 』자원봉사..</a></li>
+                        <li><a href="#">제17회 부산불꽃축제 시민사연공..</a></li>
+                        <li><a href="#">제17회 부산불꽃축제 자원봉사..</a></li>
                         <li><a href="#">2022 부산국제록페스티벌 메인스테..</a></li>
                         <li><a href="#">2022 부산국제록페스티벌 자원봉사..</a></li>
                     </ul>
-                    <ul class="notice_da d-none">
+                    <ul class="notice_da notice_content d-none">
                         <li><a href="#">2022 부산국제록페스티벌 메인스테..</a></li>
                         <li><a href="#">2022 부산국제록페스티벌 푸드코트..</a></li>
                         <li><a href="#">2021년도 결산서류 등 공시</a></li>
@@ -136,21 +151,16 @@
 
                 <div class="main_gal">
                     <div class="gal_top">
-                        <a href="#"><img src="images/main_gal.jpg" alt="photo gallery"></a>
-                        <img src="images/main_gal_link.jpg" alt="festival photo">
+                        <a href="#"><img class="gal_link" src="images/main_gal.jpg" alt="photo gallery"></a>
+                        <img class="gal_img" src="images/main_gal_link.jpg" alt="festival photo">
                     </div>
 
-                    <div class="gal_bottom">
-                        <a href="#">
-                            <img src="images/btn_v.jpg" alt="자원봉사 신청하기">
-                        </a>
-                    </div>
                 </div>
 
                 <div class="movie">
-                    <a href="#"><img src="images/main_movie.jpg" alt="festival movie"></a>
+                    <a href="#"><img class="gal_link" src="images/main_movie.jpg" alt="festival movie"></a>
                     <div class="player">
-                        <iframe width="330" height="187" src="https://www.youtube.com/embed/Fp6eijCwJWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="328" height="210" src="https://www.youtube.com/embed/Fp6eijCwJWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -159,13 +169,15 @@
     </section>
 
     <footer>
-        <div class="bottom_logo">
-            <a href="#"><img src="images/logo_gray.jpg" alt="logo"></a>
-        </div>
-        <div class="bottom_text">
-            <p>(사)부산문화관광축제조직위원회 클론</p>
-            <p>47500 부산광역시 연제구 월드컵대로 344</p>
-            <p>대표전화 : 051-123-4567</p>
+        <div class="footer_wrap">
+            <div class="bottom_logo">
+                <a href="#"><img src="images/logo_gray.jpg" alt="logo"></a>
+            </div>
+            <div class="bottom_text">
+                <p>(사)부산문화관광축제조직위원회 클론</p>
+                <p>47500 부산광역시 연제구 월드컵대로 344</p>
+                <p>대표전화 : 051-123-4567</p>
+            </div>
         </div>
     </footer>
 

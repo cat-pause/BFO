@@ -6,7 +6,7 @@
 *{margin:0; padding:0}
 ul{list-style: none}
 a{text-decoration: none; color:inherit}
-html{font-size:20px}
+html{font-size:20px;scroll-behavior: smooth}
 body{font-family: 'Noto Sans KR', sans-serif}
 .d-none{display:none}
 
@@ -45,6 +45,7 @@ header{
 /*================== SLIDE ==================*/
 #slide{
     max-width: 100%;
+    position: relative;
 }
 .slide_wrap{
     width:100%;
@@ -53,8 +54,9 @@ header{
     overflow: hidden;
 }
 .slide_ul{
-    width:915%;
-    position: relative;
+    width:900%;
+    transition:all, .3s;
+    /* position: relative; */
 }
 .slide_ul::after{
     content: "";
@@ -63,7 +65,7 @@ header{
 }
 .slide_ul li{
     position:relative;
-    /* width:100%; */
+    width:calc(100vw - 17px);
     /* display: flex; */
     float: left;
     height:600px;
@@ -74,7 +76,23 @@ header{
 .bg_img2{
     background-image: url(http://www.bfo.or.kr/admin/file/main_02[8].jpg);
 }
+.bg_img3{
+    background-image: url(http://www.bfo.or.kr/admin/file/main_03[6].jpg);
+}
+.bg_img4{
+    background-image: url(http://www.bfo.or.kr/admin/file/main_04[7].jpg);
+}
+.bg_img5{
+    background-image: url(http://www.bfo.or.kr/admin/file/main_05[10].jpg);
+}
+.bg_img6{
+    background-image: url(http://www.bfo.or.kr/admin/file/main_06[8].jpg);
+}
+.bg_img7{
+    background-image: url(http://www.bfo.or.kr/admin/file/main_07[4].jpg);
+}
 .bg_img{
+    object-fit: cover;
     width:100%;
     height:600px;
     background-repeat: no-repeat;
@@ -82,12 +100,182 @@ header{
     text-align: center;
     background-position: center center;
 }
+.btn_area{
+    position:absolute;
+    top:calc(50% - 20px);
+    width:100%;
+}
 #slide button{
+    font-size: 0;
     border:none;
     border-radius: 50%;
     cursor: pointer;
+    position:absolute;
+}
+#prev{
+    left:1%;
+}
+#next{
+    right:1%;
 }
 #slide button img{
     width:40px;
     height:40px;
 }
+.quick_slide{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    column-gap: .6rem;
+    margin:.6rem 0;
+}
+.quick_slide li{
+    width:11px;
+    height: 11px;
+    border: none;
+    border-radius: 50%;
+    background-color: #666;
+    cursor: pointer;
+}
+.quick_slide li.on{
+    background-color: #000;
+}
+
+/*================== sub_fes ==================*/
+#sub_fes{
+    width:1024px;
+    margin:1rem auto;
+}
+.fes_nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*================== MAIN article ==================*/
+#main{
+    width:1024px;
+    margin:0 auto;
+}
+.main_1f, .main_2f{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.main_1f>div{
+    width:330px;
+    height: 300px;
+    box-sizing: border-box;
+}
+.main_2f>div{
+    width:330px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.notice, .news{
+    position:relative;
+    border:1px solid #ccc;
+    padding:1.5rem;
+    font-size: .875rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: .6rem;
+}
+.switch_title{
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-size: .7rem;
+    margin-top:1rem;
+}
+.switch_title li.on{
+    font-size: 1rem;
+}
+.btn_more{
+    position:absolute;
+    top:2rem;
+    right:10%;
+}
+
+.notice_content li, .news_nav li{
+    border-bottom:1px solid #ccc;
+    font-size: .7rem;
+    line-height: 2rem;
+    text-align: left;
+}
+.notice_content li:last-child{
+    border: none;
+}
+.news_nav li:last-child{
+    border: none;
+}
+.banner img, .sns_news img{
+    width:330px;
+    height:300px;
+    font-size: 0;
+}
+.news h3{
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5rem;
+    margin-top:1rem;
+}
+
+.main_gal, .movie{
+    border: 1px solid #ccc;
+    position: relative;
+}
+.gal_link{
+    position: absolute;
+    top:1rem;
+    left:25px;
+}
+.gal_img{
+    width:328px;
+    height: 210px;
+    font-size: 0;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+}
+.player{
+    position:absolute;
+    bottom:-6px;
+}
+
+/*================== footer ==================*/
+footer{
+    border-top: 3px solid #ccc;
+    width:100%;
+}
+.footer_wrap{
+    width:1024px;
+    margin:1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom_text{
+    font-size: .625rem;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
