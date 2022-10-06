@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <title>부산문화관광축제</title>
+    <script src="lib/jquery-3.6.1.js"></script>
+</head>
+<body>
+    
+    <header>
+        <h1 class="d-none">부산문화관광축제조직위원회 로그인</h1>
+        <div class="logo">
+            <a href="/index.html"><img src="images/logo.jpg" alt="부산문화관광축제조직위원회"></a>
+        </div>
+    </header>
+
+    <section>
+        <h2 class="d-none">login form</h2>
+        <form id="login" autocomplete="off">
+            <input type="email" id="email" name="email" placeholder="이메일">
+            <input type="password" id="pw" name="pw" placeholder="비밀번호">
+            <button type="submit" id="btn_login">로그인</button>
+        </form>
+
+        <article class="sub_area">
+            <div class="f1">
+                <a href="#">비밀번호 재설정</a>
+                <a href="/join.html">회원가입</a>
+            </div>
+            <hr>
+            <div class="sns_area">
+                <p>sns계정으로 로그인하기</p>
+                <ul class="sns_ul">
+                    <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/naver.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/kakao.png" alt=""></a></li>
+                </ul>
+            </div>
+            <p class="problem"><a href="#">로그인에 문제가 있으신가요?</a></p>
+        </article>
+    </section>
+
+    <script src="script/login.js"></script>
+</body>
+</html>

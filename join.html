@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/join.css">
+    <title>부산문화관광축제</title>
+    <script src="lib/jquery-3.6.1.js"></script>
+</head>
+<body>
+    <header>
+        <h2 class="d-none">nav</h2>
+        <div class="top_nav">
+            <ul class="top_text">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/login.html">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            <ul class="top_icons">
+                <li><a href="#"><img src="images/ico_blog.jpg" alt="sns_blog"></a></li>
+                <li><a href="#"><img src="images/ico_fb.jpg" alt="sns_facebook"></a></li>
+                <li><a href="#"><img src="images/ico_insta.jpg" alt="sns_instagram"></a></li>
+                <li><a href="#"><img src="images/ico_youtube.jpg" alt="sns_youtube"></a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="header_main">
+            <div class="top_logo">
+                <a href="/index.html">
+                    <img src="images/logo.jpg" alt="busan festival">
+                </a>
+            </div>
+            <ul class="gnb">
+                <li><a href="#">축제소개</a></li>
+                <li><a href="#">조직위원회</a></li>
+                <li><a href="#">알림마당</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </div>
+    </header>
+    <hr class="header_hr">
+    <section>
+        <h2 class="d-none">회원가입 페이지</h2>
+        <div class="join_title">
+            <h3>회원가입</h3>
+            <div class="sns_area">
+                <p>sns계정으로 간편하게 회원가입</p>
+                <ul class="sns_ul">
+                    <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/naver.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/kakao.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <form id="join" autocomplete="off">
+            <div class="mail_input">
+                <label for="email" class="mail_label">이메일</label><br><br>
+                <input type="text" id="email" name="email" placeholder="이메일" required>
+                <span class="email_center">@</span>
+                <select name="domain" id="domain">
+                    <option value="">선택해주세요</option>
+                    <option value="">naver.com</option>
+                    <option value="">daum.ner</option>
+                    <option value="">gmail.com</option>
+                    <option value="">nate.com</option>
+                    <option value="">hotmail.com</option>
+                </select>
+                <button type="button" id="email_check">이메일 인증하기</button>
+            </div>
+
+            
+            <label for="pw">비밀번호</label><br><br>
+            <p>영문,숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.</p>
+            <input type="password" id="pw" name="pw" placeholder="비밀번호" required>
+
+            <label for="pw_check">비밀번호 확인</label><br>
+            <input type="password" id="pw_check" name="pw_check" placeholder="비밀번호 확인" required>
+            
+            <label for="name">성명</label><br>
+            <input type="text" id="name" name="name" placeholder="성명" required>
+
+            <div class="info_input">
+                <div class="age_wrap">
+                    <label for="age">연령</label><br>
+                    <select name="age" id="age">
+                        <option value="">20대 미만</option>
+                        <option value="">20대</option>
+                        <option value="">30대</option>
+                        <option value="">40대</option>
+                        <option value="">50대</option>
+                        <option value="">60대 이상</option>
+                    </select>
+                </div>
+                <div class="adr_wrap">
+                    <label for="adr">거주지</label><br>
+                    <select name="adr" id="adr">
+                        <option value="">서울</option>
+                        <option value="">부산</option>
+                        <option value="">경북</option>
+                        <option value="">경남</option>
+                        <option value="">전남</option>
+                        <option value="">전북</option>
+                        <option value="">기타</option>
+                    </select>
+                </div>
+            </div>
+
+        </form>
+        <hr>
+        <button type="submit" id="btn_join">가입하기</button>
+        <div class="had_id">
+            <p>이미 아이디가 있으신가요?</p>
+            <p><a href="/login.html">로그인</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_wrap">
+            <div class="bottom_logo">
+                <a href="/index.html"><img src="images/logo_gray.jpg" alt="logo"></a>
+            </div>
+            <div class="bottom_text">
+                <p>(사)부산문화관광축제조직위원회 클론</p>
+                <p>47500 부산광역시 연제구 월드컵대로 344</p>
+                <p>대표전화 : 051-123-4567</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/join.js"></script>
+</body>
+</html>

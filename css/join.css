@@ -1,0 +1,135 @@
+@charset "UTF-8";
+:root{
+    --blue-color:#35C5F0;
+    --dark-blue:#09ADDB;
+}
+
+.sns_area p{
+    font-size: .7rem;
+    color:#aaa;
+    text-align: center;
+    margin: .8rem 0;
+}
+.sns_ul{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin: 1rem 0;
+}
+.sns_ul li:hover{
+    opacity: .7;
+}
+.header_hr{width:1024px;margin:0 auto;}
+section{
+    width:360px;
+    box-sizing: border-box;
+    margin:0 auto;
+}
+section h3{
+    margin:3rem 0;
+    text-align: left;
+    width:70px;
+    border-bottom:3px solid #111;
+    font-size: .9rem;
+}
+#join label{
+    font-size:.85rem;
+}
+#join input{
+    height:45px;
+    border:1px solid #aaa;
+    border-radius: 5px;
+    text-indent: .6rem;
+}
+#join input:focus{
+    font-size: .7rem;
+}
+
+.mail_input{
+    margin-top:2rem;
+}
+.mail_br{
+    font-size: .5rem;
+}
+#email{
+    width:160px;
+}
+.email_center{
+    width:20px;
+    text-align: center;
+    color:#aaa;
+}
+#domain{
+    width:165px;
+    height:46px;
+    text-indent: .3rem;
+}
+
+#email_check{
+    margin:1rem 0 2rem 0;
+    width:360px;
+    height: 2.5rem;
+    font-weight: 900;
+    font-size: .8rem;
+    color:#aaa;
+    border:1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+#join p{
+    font-size: .7rem;
+    color:#888;
+    margin:-1rem 0 .7rem 0;
+}
+
+#pw, #pw_check, #name{
+    width:360px;
+    margin: .5rem 0 1.5rem 0;
+}
+
+.info_input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.age_wrap{flex:1}
+.adr_wrap{flex:1;margin-left:20px}
+#age, #adr{
+    width:170px;
+    height:2rem;
+    text-indent: .3rem;
+    font-size: .625rem;
+    text-align: left;
+}
+
+#btn_join{
+    width:360px;
+    height: 55px;
+    border:none;
+    border-radius: 5px;
+    color:#fff;
+    font-size: .8rem;
+    font-weight: 900;
+    cursor: pointer;
+    background-color: var(--blue-color);
+    transition: all .2s;
+    margin-bottom:1rem;
+    margin-top:3rem;
+}
+#btn_join:hover{
+    background-color: var(--dark-blue);
+}
+
+.had_id{
+    display: flex;
+    justify-content: center;
+    font-size: .7rem;
+    column-gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+.had_id a{
+    font-weight: 900;
+    text-decoration: underline;
+}

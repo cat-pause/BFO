@@ -1,0 +1,96 @@
+@charset "UTF-8";
+:root{
+    --blue-color:#35C5F0;
+    --dark-blue:#09ADDB;
+}
+*{margin:0; padding:0}
+ul{list-style: none}
+a{text-decoration: none; color:inherit}
+html{font-size:20px;scroll-behavior: smooth}
+body{font-family: 'Noto Sans KR', sans-serif}
+.d-none{display:none}
+
+.logo{
+    width: 220px;
+    margin:0 auto;
+    margin-top:8rem;
+    margin-bottom:2.5rem;
+}
+.logo img{
+    width:220px;
+    font-size: 0;
+    text-align: center;
+}
+
+section{
+    width:400px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login{
+    width:300px;
+    margin:0 auto;
+    box-sizing: border-box;
+}
+#email, #pw{
+    width:300px;
+    height: 50px;
+    text-indent: .7rem;
+    border: 1px solid #A0A0A0;
+    background-color: #F9F9F9;
+}
+#email:focus, #pw:focus{
+    font-size: .7rem;
+}
+#pw{border-top:none;}
+
+#btn_login{
+    width:300px;
+    line-height: 50px;
+    margin:1.5rem 0 0 0;
+    background-color: var(--blue-color);
+    color:#fff;
+    font-weight: 900;
+    font-size: .825rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s;
+}
+#btn_login:hover{background-color: #09ADDB;}
+
+.f1{
+    font-size: .7rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    color:#555;
+    margin:.8rem 0;
+}
+
+.sns_area p{
+    font-size: .7rem;
+    color:#aaa;
+    text-align: center;
+    margin: .8rem 0;
+}
+.sns_ul{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+}
+.sns_ul li:hover{
+    opacity: .7;
+}
+.problem{
+    font-size: .7rem;
+    text-align: center;
+    margin:1rem;
+}
+.problem:hover{
+    text-decoration: underline;
+}
+
+hr{width: 280px;margin:0 auto;}
