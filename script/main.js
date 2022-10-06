@@ -16,7 +16,8 @@ $(function(){
         iWidth = window.innerWidth;
     });
     
-    var time = 3000;
+    //슬라이드 시간 조정 - time
+    var time = 4000;
     var autoSlideId = setInterval(autoSlide, time);
     var count = 0;
     function autoSlide(){
@@ -144,14 +145,56 @@ $(function(){
     $(".slide_ul").on("mouseenter", function(){
         clearInterval(autoSlideId);
     })
-    prev.on("mouseenter", function(){clearInterval(autoSlideId);})
-    next.on("mouseenter", function(){clearInterval(autoSlideId);})
+    prev.on("mouseenter", function(){
+        $("#prev img").innerHTML = '<img src=\"images/prev_on.png\" alt=\"\">';
+        clearInterval(autoSlideId);
+    })
+    next.on("mouseenter", function(){
+        $("#next img").innerHTML = '<img src=\"images/next_on.png\" alt=\"\">';
+        clearInterval(autoSlideId);
+    })
     $(".slide_ul").on("mouseleave", function(){
         autoSlideId = setInterval(autoSlide, time);
     })
-    prev.on("mouseleave", function(){autoSlideId = setInterval(autoSlide, time);})
-    next.on("mouseleave", function(){autoSlideId = setInterval(autoSlide, time);})
+    prev.on("mouseleave", function(){
+        $("#previmg").innerHTML = '<img src=\"images/prev.png\" alt=\"\">';
+        autoSlideId = setInterval(autoSlide, time);
+    })
+    next.on("mouseleave", function(){
+        $("#nextimg").innerHTML = '<img src=\"images/next.png\" alt=\"\">';
+        autoSlideId = setInterval(autoSlide, time);
+    })
+  
+    //마우스 올리면 공지사항/공시공고 View Switch
+    const titleNotice = document.querySelector(".switch_title li:nth-child(1)");
+    const titleDA = document.querySelector(".switch_title li:nth-child(2)");
+    const notice = document.querySelector(".notice_notice");
+    const da = document.querySelector(".notice_da");
+
+    $(".switch_title").on("mousemove", e =>{
+        if(e.target == titleNotice){
+            titleDA.classList.remove("on");
+            titleNotice.classList.add("on");
+            notice.classList.remove("d-none");
+            da.classList.add("d-none");
+        }else if(e.target == titleDA){
+            titleNotice.classList.remove("on");
+            titleDA.classList.add("on");
+            da.classList.remove("d-none");
+            notice.classList.add("d-none");
+        }
+    })
     
+
+
+
+
+
+
+
+
+
+
 })
 
 
