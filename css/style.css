@@ -9,6 +9,13 @@ a{text-decoration: none; color:inherit}
 html{font-size:20px;scroll-behavior: smooth}
 body{font-family: 'Noto Sans KR', sans-serif}
 .d-none{display:none}
+.not-yet img{
+    width:600px;
+}
+.not-yet{
+    width:600px;
+    margin:5rem auto;
+}
 
 /*================== HEADER ==================*/
 header{
@@ -40,6 +47,33 @@ header{
     display: flex;
     align-items: center;
     column-gap: 2.5rem;
+}
+.gnb>li>a{
+    line-height: 90px;
+}
+.gnb>li:nth-child(1){
+    position:relative;
+    width:100px;
+    text-align: center;
+}
+.gnb-sub{
+    position:absolute;
+    top:90px;
+    left:-1.2rem;
+    z-index: 9999;
+    width:170px;
+    font-size: .7rem;
+    text-align: left;
+    text-indent: 1.2rem;
+    background-color: #081929;
+    color:#fff;
+    padding:.5rem 0 .5rem 0;
+}
+.gnb-sub li{
+    line-height: 2rem;
+}
+.gnb-sub li:hover{
+    text-decoration: underline;
 }
 
 /*================== SLIDE ==================*/

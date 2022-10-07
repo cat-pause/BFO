@@ -185,6 +185,14 @@ $(function(){
         }
     })
     
+    // 마우스 올리면 sub 메뉴 display
+
+    $(".gnb>li:nth-child(1)").on('mouseover', function(){
+        $(".gnb-sub").removeClass("d-none");
+    })
+    $(".gnb>li:nth-child(1)").on('mouseout', function(){
+        $(".gnb-sub").addClass("d-none");
+    })
 
 
 
