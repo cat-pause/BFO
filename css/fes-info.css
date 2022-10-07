@@ -1,0 +1,171 @@
+
+.header_hr{
+    width:1024px;
+    margin:0 auto;
+}
+#fes-info{
+    width:1024px;
+    margin:0 auto;
+}
+.info-header{
+    width:1024px;
+    margin:0 auto;
+}
+#fes-info article{
+    width:750px;
+    margin:0 auto;
+    position:relative;
+}
+#fes-info h3{
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 3rem;
+}
+.underbar{
+    margin-top:.5rem;
+    width:65px;
+    height:4px;
+    background-color: #FEA316;
+} 
+.fes3-underbar{
+    background-color: #C51431;
+}
+.fes4-underbar{
+    background-color: #155EC7;
+}
+.fes5-underbar{
+    background-color: #466300;
+}
+.fes6-underbar{
+    background-color: #045188;
+}
+.fes1-p{
+    font-size: 1.4rem;
+    font-weight: 900;
+    color:#6D4424;
+    margin:2rem 0;
+}
+.fes-finish{
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* --------- fes-text-area --------- */
+.fes-info-main{
+    width:750px;
+    display: flex;
+    margin-top:3rem;
+    margin-bottom: 4rem;
+    border:1px solid #ccc;
+}
+.fes-text-area{
+    padding:1.5rem 1rem 1rem 1rem;
+    border-left:1px solid #ccc;
+}
+.e-title{
+    color:#1B496A;
+    font-size: .6rem;
+    font-weight: 900;
+}
+.e-title-fes6{
+    font-size: .6rem;
+    font-weight: 900;
+    color:#4B0D56;
+}
+.area-title{
+    color:#1B496A;
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin:.2rem 0 1.25rem 0; 
+}
+.area-title-fes3{
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+.area-title-fes6{
+    color:#4B0D56;
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+}
+.area-title-fes5{
+    color:#04A265;
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+}
+.area-title-fes7{
+    color:#FF6C00;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+.area-title-fes3:nth-child(2){
+    margin-bottom: 1.25rem;
+}
+.text-detail{
+    font-size: .825rem;
+    font-weight: 100;
+    margin-bottom: .5rem;
+}
+.copyrights{
+    position:absolute;
+    font-size: .55rem;
+    top:565px;
+}
+
+/* --------- fes-info-sub --------- */
+.fes-info-sub{
+    margin-bottom: 5rem;
+}
+.info-sub-title{
+    font-size: .9rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.sub-title7{
+    color:#7F20B9;
+}
+.info-sub-detail{
+    font-size: .75rem;
+}
+
+/* --------- add-imgs --------- */
+.add-imgs{
+    width:750px;
+    margin-bottom: 3rem;
+}
+.add-imgs li{
+    margin-bottom: .5rem;
+}
+.add-imgs img{
+    width:750px;
+}
+.copyrights2{
+    font-size: .55rem;
+    text-align: center;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
