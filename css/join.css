@@ -28,9 +28,9 @@ section{
 section h3{
     margin:3rem 0;
     text-align: left;
-    width:70px;
+    width:80px;
     border-bottom:3px solid #111;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 #join label{
     font-size:.85rem;

@@ -40,6 +40,7 @@ header{
 }
 
 .header_main{
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -48,32 +49,38 @@ header{
     align-items: center;
     column-gap: 2.5rem;
 }
+.gnb-background{
+    width:640px;
+    height: 320px;
+    background-color: #081929;
+    position:absolute;
+    z-index: 666;
+    top:90px;
+    right: -25px;
+}
 .gnb>li>a{
     line-height: 90px;
 }
-.gnb>li:nth-child(1){
+.gnb>li{
     position:relative;
-    width:100px;
+    width:110px;
     text-align: center;
 }
 .gnb-sub{
     position:absolute;
     top:90px;
-    left:-1.2rem;
-    z-index: 9999;
-    width:170px;
-    font-size: .7rem;
+    left:-10px;
+    z-index: 999;
+    width:130px;
+    font-size: .635rem;
     text-align: left;
     text-indent: 1.2rem;
-    background-color: #081929;
+    /* background-color: #081929; */
     color:#fff;
     padding:.5rem 0 .5rem 0;
 }
 .gnb-sub li{
     line-height: 2rem;
-}
-.gnb-sub li:hover{
-    text-decoration: underline;
 }
 
 /*================== SLIDE ==================*/
