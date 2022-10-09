@@ -174,14 +174,14 @@ $(function(){
     
     // 마우스 올리면 sub 메뉴 display
     $(".gnb").on('mouseover', ()=>{
-        // $(".gnb-sub").removeClass("d-none");
-        $(".gnb-sub").slideDown(200);
-        $(".gnb-background").slideDown(200);
+        $(".gnb-sub").removeClass("d-none");
+        // $(".gnb1 ul").slideDown(200);
+        $(".gnb-background").removeClass("d-none");
     })
     $(".gnb").on('mouseleave', ()=>{
-        // $(".gnb-sub").addClass("d-none");
-        $(".gnb-sub").slideUp(200);
-        $(".gnb-background").slideUp(200);
+        $(".gnb-sub").addClass("d-none");
+        // $(".gnb1 ul").slideUp(200);
+        $(".gnb-background").addClass("d-none");
     })
 
 })
