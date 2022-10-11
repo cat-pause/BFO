@@ -36,6 +36,7 @@ $(function(){
     // PREV, NEXT 버튼 클릭시 슬라이드 이동
     prev.on("click", ()=>{
         console.log("prev click");
+        clearInterval(autoSlideId);
         if(count <= 0){
             count = maxSlide-1;
         }else{count--}
@@ -46,10 +47,10 @@ $(function(){
         qList[count].classList.add("on");
         var movePoint = -(count * (iWidth-17));
         slideUl.css("margin-left",movePoint+'px');
-        
     })
     next.on("click", ()=>{
         console.log("next click");
+        clearInterval(autoSlideId);
         if(count >= maxSlide-1){
             count = 0
         }else{count++}
@@ -184,6 +185,34 @@ $(function(){
         $(".gnb-background").addClass("d-none");
     })
 
+
+    var lazyloadImages = document.querySelectorAll("bg-img");    
+    var lazyloadThrottleTimeout;
+  
+    function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+        }, 20);
+    }
+  
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
 })
 
 
