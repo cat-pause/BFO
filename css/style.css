@@ -6,6 +6,7 @@
 *{margin:0; padding:0}
 ul{list-style: none}
 a{text-decoration: none; color:inherit}
+a:hover{text-decoration: none; color:inherit}
 html{font-size:20px;scroll-behavior: smooth}
 body{font-family: 'Noto Sans KR', sans-serif}
 .d-none{display:none}
@@ -16,6 +17,8 @@ body{font-family: 'Noto Sans KR', sans-serif}
     width:600px;
     margin:5rem auto;
 }
+.container-c{width:1024px}
+#mobile-header{display:none}
 
 /*================== HEADER ==================*/
 header{
@@ -84,55 +87,53 @@ header{
 }
 
 /*================== SLIDE ==================*/
-#slide{
+/* #slide{
     max-width: 100%;
     position: relative;
-}
+} */
 .slide_wrap{
     width:100%;
     height: 600px;
     position: relative;
     overflow: hidden;
 }
-.slide_ul{
-    width:900%;
-    transition:all, .6s;
-    /* position: relative; */
+.carousel-indicators{
+    margin:1rem auto;
 }
-.slide_ul::after{
-    content: "";
-    display: block;
-    clear: both;
+.carousel-indicators li{
+    width:13px;
+    height: 13px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 .4rem;
+    opacity: .9;
 }
-.slide_ul li{
-    position:relative;
-    width:calc(100vw - 17px);
-    /* display: flex; */
-    float: left;
-    height:600px;
+.carousel-indicators li.active{
+    background-color: #081929;
 }
-.bg_img1{
-    background-image: url(../images/main_01[6].jpg);
+.ca_img1{
+    background-image: url(../images/main_01.jpg);
 }
-.bg_img2{
-    background-image: url(../images/main_02[8].jpg);
+.ca_img2{
+    background-image: url(../images/main_02.jpg);
 }
-.bg_img3{
-    background-image: url(../images/main_03[6].jpg);
+.ca_img3{
+    background-image: url(../images/main_03.jpg);
 }
-.bg_img4{
-    background-image: url(../images/main_04[7].jpg);
+.ca_img4{
+    background-image: url(../images/main_04.jpg);
 }
-.bg_img5{
-    background-image: url(../images/main_05[10].jpg);
+.ca_img5{
+    background-image: url(../images/main_05.jpg);
 }
-.bg_img6{
-    background-image: url(../images/main_06[8].jpg);
+.ca_img6{
+    background-image: url(../images/main_06.jpg);
 }
-.bg_img7{
-    background-image: url(../images/main_07[4].jpg);
+.ca_img7{
+    background-image: url(../images/main_07.jpg);
 }
-.bg_img{
+.ca_img{
     object-fit: cover;
     width:100%;
     height:600px;
@@ -140,29 +141,24 @@ header{
     background-size: cover;
     text-align: center;
     background-position: center center;
+    cursor: pointer;
+}
+.np-btn{
+    transform: scale(1.5);
 }
 .btn_area{
     position:absolute;
     top:calc(50% - 20px);
     width:100%;
 }
-#slide button{
+/* #slide button{
     font-size: 0;
     border:none;
     border-radius: 50%;
     cursor: pointer;
     position:absolute;
-}
-#prev{
-    left:1%;
-}
-#next{
-    right:1%;
-}
-#slide button img{
-    width:40px;
-    height:40px;
-}
+} */
+
 .quick_slide{
     width:100%;
     display: flex;
@@ -170,17 +166,10 @@ header{
     column-gap: .6rem;
     margin:.6rem 0;
 }
-.quick_slide li{
-    width:11px;
-    height: 11px;
-    border: none;
-    border-radius: 50%;
-    background-color: #666;
-    cursor: pointer;
-}
-.quick_slide li.on{
+
+/* .quick_slide li.active{
     background-color: #000;
-}
+} */
 
 /*================== sub_fes ==================*/
 #sub_fes{
@@ -194,7 +183,7 @@ header{
 
 /*================== MAIN article ==================*/
 #main{
-    width:1024px;
+    max-width:1024px;
     margin:0 auto;
 }
 .main_1f, .main_2f{
@@ -223,22 +212,26 @@ header{
     flex-direction: column;
     justify-content: center;
     row-gap: .6rem;
+    /* width:100%; */
 }
 .switch_title{
-    line-height: 1.5rem;
+    line-height: 1rem;
     display: flex;
     align-items: center;
     column-gap: 1rem;
     font-size: .7rem;
-    margin-top:1rem;
+    margin-top:1.5rem;
     cursor: default;
+}
+.notice_content{
+    margin-top:-.5rem;
 }
 .switch_title li.on{
     font-size: 1rem;
 }
 .btn_more{
     position:absolute;
-    top:2rem;
+    top:1.1rem;
     right:10%;
 }
 
@@ -255,15 +248,16 @@ header{
     border: none;
 }
 .banner img, .sns_news img{
-    width:330px;
+    width:100%;
+    text-align: center;
     height:300px;
     font-size: 0;
 }
 .news h3{
     font-size: 1rem;
     text-align: left;
-    line-height: 1.5rem;
-    margin-top:1rem;
+    line-height: 1rem;
+    margin-top:1.5rem;
 }
 
 .main_gal, .movie{
@@ -283,10 +277,17 @@ header{
     bottom: 0;
     left: 0;
 }
+.gal_img img{
+    width:100%;
+    text-align: center;
+    font-size: 0;
+}
 .player{
     position:absolute;
     bottom:-6px;
+    width:100%;
 }
+
 
 /*================== footer ==================*/
 footer{
@@ -306,6 +307,103 @@ footer{
 }
 
 
+@media screen and (min-width:577px) and (max-width:768px){
+    /* 살려줘 */
+    #sub_fes{
+        display: none;
+    }
+}
+@media screen and (min-width:310px) and (max-width:576px){
+    header{
+        display: none;
+    }
+    #mobile-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:100vw;
+    }
+    #mobile-header .logo img{
+        width:190px;
+        margin:1rem 0;
+    }
+    #mobile-header .navbar{
+        margin-top:-2rem;
+        font-size: .6rem;
+        width:100%;
+        padding:0;
+        justify-content: end;
+        flex-direction: row-reverse;
+        text-align: end;
+    }
+    #mobile-header .navbar-toggler{
+        transform: scale(.7) translateX(1.4rem);
+        border: none;
+        
+    }
+    #mobile-header .navbar-brand{
+        font-size: .7rem;
+        margin-left:-.5rem;
+    }
+    
+    #sub_fes{
+        display: none;
+    }
+    .ca_img{
+        object-fit: cover;
+        width:100%;
+        height:300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        background-position: center center;
+        cursor: pointer;
+    }
+    .np-btn{
+        transform: scale(.8);
+    }
+    
+    .carousel-indicators{
+        margin:3% 0;
+        padding:0;
+    }
+    .carousel-indicators li{
+        transform: scale(.8);
+        margin:0 .3rem;
+    }
+    .ca_img{
+        background-position: 61.7% center;
+
+    }
+    .carousel-control-next{
+        opacity: .9;
+        right: 0;
+    }
+    .carousel-control-prev{
+        opacity: .9;
+        left:0;
+    }
+    .main_1f>div{
+        width:100vw;
+        margin:0 auto;
+        height: 300px;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    .main_2f>div{
+        width:100vw;
+        margin:0 auto;
+        height: 300px;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    .gal_img{
+        width:100%;
+    }
+    .player{
+        width:100%;
+    }
+}
 
 
 

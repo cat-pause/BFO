@@ -129,29 +129,7 @@ $(function(){
         autoSlideId = setInterval(autoSlide, time);
     })
     
-    // 마우스 올리면 슬라이드 정지
-    $(".slide_ul").on("mouseenter", ()=>{
-        clearInterval(autoSlideId);
-    })
-    prev.on("mouseenter", ()=>{
-        $("#prev img").innerHTML = '<img src=\"images/prev_on.png\" alt=\"\">';
-        clearInterval(autoSlideId);
-    })
-    next.on("mouseenter", ()=>{
-        $("#next img").innerHTML = '<img src=\"images/next_on.png\" alt=\"\">';
-        clearInterval(autoSlideId);
-    })
-    $(".slide_ul").on("mouseleave", ()=>{
-        autoSlideId = setInterval(autoSlide, time);
-    })
-    prev.on("mouseleave", ()=>{
-        $("#previmg").innerHTML = '<img src=\"images/prev.png\" alt=\"\">';
-        autoSlideId = setInterval(autoSlide, time);
-    })
-    next.on("mouseleave", ()=>{
-        $("#nextimg").innerHTML = '<img src=\"images/next.png\" alt=\"\">';
-        autoSlideId = setInterval(autoSlide, time);
-    })
+    
   
     //마우스 올리면 공지사항/공시공고 View Switch
     const titleNotice = document.querySelector(".switch_title li:nth-child(1)");
@@ -185,8 +163,8 @@ $(function(){
         $(".gnb-background").addClass("d-none");
     })
 
-
-    var lazyloadImages = document.querySelectorAll("bg-img");    
+    // 이미지 로딩 lazy
+    var lazyloadImages = document.querySelectorAll("ca-img");    
     var lazyloadThrottleTimeout;
   
     function lazyload () {
