@@ -17,21 +17,21 @@ $(function(){
     });
     
     var time = 4000;            //슬라이드 시간 조정 - time
-    var autoSlideId = setInterval(autoSlide, time);
-    var count = 0;
-    function autoSlide(){
+    // var autoSlideId = setInterval(autoSlide, time);
+    // var count = 0;
+    // function autoSlide(){
         
-        if(count >= maxSlide-1) {count = 0}
-        else{count++}
+    //     if(count >= maxSlide-1) {count = 0}
+    //     else{count++}
 
-        for(let i = 0; i < 7; i++){
-            qList[i].classList.remove("on");
-        }
-        qList[count].classList.add("on");
-        console.log(count);
-        var movePoint = -(count * (iWidth-17));
-        slideUl.css("margin-left",movePoint+'px');
-    }
+    //     for(let i = 0; i < 7; i++){
+    //         qList[i].classList.remove("on");
+    //     }
+    //     qList[count].classList.add("on");
+    //     console.log(count);
+    //     var movePoint = -(count * (iWidth-17));
+    //     slideUl.css("margin-left",movePoint+'px');
+    // }
 
     // PREV, NEXT 버튼 클릭시 슬라이드 이동
     prev.on("click", ()=>{
@@ -191,6 +191,8 @@ $(function(){
     document.addEventListener("scroll", lazyload);
     window.addEventListener("resize", lazyload);
     window.addEventListener("orientationChange", lazyload);
+
+
 })
 
 
