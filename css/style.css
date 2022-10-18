@@ -22,6 +22,7 @@ body{font-family: 'Noto Sans KR', sans-serif}
 
 /*================== HEADER ==================*/
 .tab-header{display: none;}
+#mobile-header{display: none;}
 header{
     width:1024px;
     margin:0 auto;
@@ -316,6 +317,9 @@ footer{
     header{
         display: none;
     }
+    #mobile-header{
+        display: none;
+    }
     .tab-header{
         display: block;
         width:100%;
@@ -372,6 +376,8 @@ footer{
         text-align: center;
     }
 }
+
+/* ============== mobile ============== */
 @media screen and (min-width:310px) and (max-width:576px){
     header{
         display: none;
@@ -380,7 +386,8 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width:100vw;
+        width:280px;
+        margin:0 auto;
     }
     #mobile-header .logo img{
         width:190px;
@@ -388,6 +395,7 @@ footer{
     }
     #mobile-header .navbar{
         margin-top:-2rem;
+        margin-left: 4rem;
         font-size: .6rem;
         width:100%;
         padding:0;
@@ -459,7 +467,7 @@ footer{
     }
     .main_1f>div{
         /* width:100vw; */
-        margin:1rem auto;
+        margin:0 auto;
         height: 300px;
         box-sizing: border-box;
         padding: 0;
@@ -471,6 +479,10 @@ footer{
         box-sizing: border-box;
         padding: 0;
     }
+    .notice, .news{
+        padding:0 1rem !important;
+    }
+    
     .gal_img{
         width:100%;
     }
