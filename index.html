@@ -16,8 +16,6 @@
     <title>부산문화관광축제</title>
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
-    
-
     <script src="lib/jquery-3.6.1.js"></script>
 </head>
 <body>
@@ -84,14 +82,31 @@
     </header>
 
     <div class="tab-header">
+        <div class="top_nav">
+            <ul class="top_text">
+                <li><a href="#">HOME</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </div>
         <div class="logo">
             <a href="#">
                 <img src="images/logo.jpg" alt="">
             </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="fes-info/fes5.html">축제소개</a></li>
+            <ul class="tab-nav-mainul">
+                <li id="tab_open"><a href="#">축제소개</a>
+                    <ul id="tabmode-subul" class="tab-nav-subul d-none">
+                        <li><a href="fes-info/fes1.html">부산낙동강 유채꽃축제</a></li>
+                        <li><a href="fes-info/fes2.html">부산원도심 골목길축제</a></li>
+                        <li><a href="fes-info/fes3.html">부산항축제</a></li>
+                        <li><a href="fes-info/fes4.html">부산바다축제</a></li>
+                        <li><a href="fes-info/fes5.html">부산국제 록페스티벌</a></li>
+                        <li><a href="fes-info/fes6.html">부산불꽃축제</a></li>
+                        <li><a href="fes-info/fes7.html">새해맞이 타종식</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">조직위원회</a></li>
                 <li><a href="#">알림마당</a></li>
                 <li><a href="#">커뮤니티</a></li>

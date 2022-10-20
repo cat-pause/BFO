@@ -7,8 +7,19 @@ $(function(){
     const maxSlide = slideList.length;
     const qList = document.querySelectorAll(".quick_slide li"); 
     // const qList = $(".quick_slide li");
-
+    const tabLi = document.querySelector(".tab-sub-li");
+    const tabSubUl = document.querySelector(".tab-nav-subul");
     var iWidth = window.innerWidth;
+
+    // tab-nav  ----- slideToggle 오류 ----- 이ㅏ럼니라ㅓㅣ라ㅓ히ㅏㅎㄷㄴ
+    $("#tab_open").click(function(){
+        if( $(".tab-nav-subul").hasClass("d-none") ){
+            $(".tab-nav-subul").removeClass("d-none")
+        }else{
+            $(".tab-nav-subul").addClass("d-none")
+        }
+
+    })
 
     window.addEventListener('resize', ()=>{
         // console.log("브라우저 화면너비 : " + window.innerWidth);
@@ -192,6 +203,9 @@ $(function(){
     window.addEventListener("resize", lazyload);
     window.addEventListener("orientationChange", lazyload);
 
+    
+
+   
 
 })
 
